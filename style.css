@@ -4,84 +4,112 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-nav{
-    display:flex;             
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-    background:#f8f9fa;
-}
-
-.nav-links{
-    list-style:none;
-    display:flex;
-    gap:30px;
-}
-
 
 body {
-    background: #f4f8ff;
+    background-color: #f4f8fb;
 }
 
-.hero {
+/* Header */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 10%;
-    min-height: 100vh;
+    padding: 20px 80px;
+    background-color: white;
 }
 
-.hero-content {
-    max-width: 500px;
-}
-
-.hero-content h1 {
-    font-size: 32px;
-    color: #333;
-}
-
-.hero-content h2 {
-    font-size: 36px;
+.logo {
+    font-size: 22px;
+    font-weight: bold;
     color: #007bff;
-    margin: 10px 0;
 }
 
-.hero-content p {
+nav a {
+    margin: 0 15px;
+    text-decoration: blue;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-btn {
+    padding: 8px 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+}
+
+.hero-left {
+    width: 50%;
+}
+
+.hero-left h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero-left span {
+    color: #007bff;
+}
+
+.hero-left p {
+    margin-bottom: 25px;
     color: #555;
-    margin: 15px 0 25px;
     line-height: 1.6;
 }
 
-/* CTA Button */
-.cta-btn {
-    padding: 14px 28px;
-    background: #007bff;
+.hero-btn {
+    padding: 12px 25px;
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-/* Hover Effect (IMPORTANT PART OF TASK) */
-.cta-btn:hover {
-    transform: scale(1.15) rotate(-6deg);
-    background: #0056b3;
+.hero-right {
+    width: 40%;
 }
 
-.hero-image img {
-    width: 300px;
+.hero-right img {
+    width: 100%;
+}
+/* ================= HERO IMAGE ANIMATION ================= */
+
+.hero-right img {
+    width: 100%;
+    animation: orbitMove 4s infinite ease-in-out;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
+/* Keyframes */
+@keyframes orbitMove {
+
+    0% {
+        transform: translate(0px, 0px) scale(1);
     }
 
-    .hero-image {
-        margin-top: 40px;
+    25% {
+        transform: translate(20px, -20px) scale(0.95, 1.05);
+    }
+
+    50% {
+        transform: translate(40px, 0px) scale(1.05, 0.95);
+    }
+
+    75% {
+        transform: translate(20px, 20px) scale(0.95, 1.05);
+    }
+
+    100% {
+        transform: translate(0px, 0px) scale(1);
     }
 }
