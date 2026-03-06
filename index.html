@@ -2,29 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Compound Interest Calculator</title>
+<title>Even or Odd Checker</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>Compound Interest Calculator</h1>
+<h1>Check Even or Odd</h1>
 
-<div class="container">
+<div class="box">
 
-<label>Principal Amount:</label>
-<input type="number" id="principal">
+<input type="number" id="number" placeholder="Enter a number">
 
-<label>Interest Rate (%):</label>
-<input type="number" id="rate">
-
-<label>Time (Years):</label>
-<input type="number" id="time">
-
-<label>Compounded Per Year:</label>
-<input type="number" id="n">
-
-<button onclick="calculateCI()">Calculate</button>
+<button onclick="checkNumber()">Check</button>
 
 <h2 id="result"></h2>
 
